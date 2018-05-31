@@ -1,11 +1,8 @@
 net = require('net');
 
-var clients = [];
-
 net.createServer(function (socket) {
 
-    socket.name = socket.remoteAddress + ":" + socket.remotePort
-    clients.push(socket);
+    socket.name = socket.remoteAddress + ":" + socket.remotePort;
     socket.write("Welcome " + socket.name + "\n");
     socket.write(socket.name + " joined the chat\n", socket);
 
