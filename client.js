@@ -6,11 +6,6 @@ var port = '5000';
 var host = '127.0.0.1';
 client = net.connect({port: port, host: host}, function(){
     client.write("Hello, I'm "+ myNick);
-    client.write("Hello, I'm "+ myNick);
-    client.write("Hello, I'm "+ myNick);
-    client.write("Hello, I'm "+ myNick);
-    client.write("Hello, I'm "+ myNick);
-    client.write("Hello, I'm "+ myNick);
 });
 
 client.on('data', function(data){
